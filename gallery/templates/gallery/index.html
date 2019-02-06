@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta charset="utf-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	{% load staticfiles %}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+<link rel="stylesheet" href="{% static 'icomoon/style.css' %}">
+<link rel="stylesheet" href="{% static 'icomoon1/style.css' %}">
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+
+</head>
+<body>
+
+<div id="header">
+  <center style="padding:10px 0;font-size:24px; background-color: #706fd3; font-family: 'Oxygen', sans-serif;font-weight: bold; letter-spacing: 2px; color:#fff;"> Chrysalis 2k18 </center>  
+</div>
+
+	
+</div>
+<label class="css-label"></label>
+<input type="checkbox" class="panelshow" />
+<div id="left">
+	<a href="http://127.0.0.1:8000/home/"> <button class="fas fa-home"> Home </button> </a>
+    <a href="/events/index.html"> <button class="icon-event_note"> Commitee </button> </a>
+	<a href="/gallery/index.html"> <button class="icon-gallery"> Gallery </button> </a>
+<!--	<a href="/artical/index.html"> <button class="icon-article"> Articals</button> </a> 
+	<a href="/notification/index.html"> <button class="icon-notifications-outline"> Notification </button> </a> -->
+</div>
+
+<div class="container">
+  <div id="page" class="right">
+    <div class="cont-wrap">
+      <div class="wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="container">
+              <div class="col-md-7 file">
+          
+
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <form action="." method="POST"> {% csrf_token %}
+              {{form.as_p}}
+             
+            </form> 
+          </div>
+
+          <div class="row">
+            {% for image in all_images %}
+              <div class="col-md-7">
+                <div> 
+                  <h1 style="font-size: 20px;font-weight: bold"> {{image.title}} </h1>
+                </div>
+                <div> 
+                  <p> {{image.description|upper}} </p>
+                </div>
+                <div> 
+                  <img src="{{image.file.url}}" alt="{{image.title}}">  
+                </div>
+              </div>
+            {% endfor %}
+            </div>
+          </div>
+        </div>
+	    </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+
+

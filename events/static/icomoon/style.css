@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?6fi1kg');
+  src:  url('fonts/icomoon.eot?6fi1kg#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?6fi1kg') format('truetype'),
+    url('fonts/icomoon.woff?6fi1kg') format('woff'),
+    url('fonts/icomoon.svg?6fi1kg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-group-outline:before {
+  content: "\e904";
+}
+.icon-event_note:before {
+  content: "\e903";
+}
+.icon-notifications-outline:before {
+  content: "\e900";
+}
+.icon-gallery:before {
+  content: "\e902";
+}
+.icon-popup:before {
+  content: "\e902";
+}
+.icon-popout:before {
+  content: "\e902";
+}
+.icon-article:before {
+  content: "\e901";
+}
+.icon-gallery:before {
+  content: "\e902";
+}
+.icon-popup:before {
+  content: "\e902";
+}
+.icon-popout:before {
+  content: "\e902";
+}
